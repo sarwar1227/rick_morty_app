@@ -1,0 +1,32 @@
+/* Reset basic styles */
+
+/* Box-sizing border-box for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default text decoration (underline) */
+a {
+  text-decoration: none;
+}
+
+/* Custom Scrollbar Width */
+::-webkit-scrollbar {
+  width: 0.4rem;
+  height: 0.5em;
+}
+
+/* Custom Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+  background: #dfdfdf;
+  border-radius: 1rem;
+}
+
+/* Custom Scrollbar Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #afb8c1;
+}
