@@ -1,11 +1,17 @@
 import { useState, useEffect } from "react";
-import { useTheme, Grid, Typography, useMediaQuery, Stack } from "@mui/material";
+import {
+  useTheme,
+  Grid,
+  Typography,
+  useMediaQuery,
+  Stack,
+} from "@mui/material";
 import {
   SearchBar,
   FilterBar,
   CharacterList,
   Loader,
-  PaginationBar
+  PaginationBar,
 } from "@components";
 import { useCharactersApi } from "@hooks";
 
@@ -26,7 +32,8 @@ const CharactersPage = () => {
   /**
    * Custom Hooks
    */
-  const { fetchCharacters, characters, totalPages, isFetching } = useCharactersApi();
+  const { fetchCharacterList, characters, totalPages, isFetching } =
+    useCharactersApi();
 
   /**
    * Fetches the characters based on first load or change of  -
@@ -35,7 +42,7 @@ const CharactersPage = () => {
    * 3. Applied filters
    */
   useEffect(() => {
-    fetchCharacters({ page, search, filters });
+    fetchCharacterList({ page, search, filters });
   }, [page, search, filters]);
 
   return (
